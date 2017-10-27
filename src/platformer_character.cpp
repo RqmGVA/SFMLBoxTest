@@ -20,13 +20,13 @@ PlatformerCharacter::PlatformerCharacter(b2World & world)
 	box_shape.SetAsBox(
 		pixel2meter(size.x) / 2.f, pixel2meter(size.y) / 2.f);
 	box.shape = &box_shape;
-	box.friction = 0.f;
+	box.friction =0.005f;
 
 	b2FixtureDef foot;
 	b2PolygonShape foot_shape;
 	foot.isSensor = true;
 	foot_shape.SetAsBox(
-		pixel2meter(size.x-4.f) / 2.f, pixel2meter(2.0f) / 2.f,
+		pixel2meter(size.x) / 2.f, pixel2meter(2.0f) / 2.f,
 		b2Vec2(0.f, pixel2meter(size.y)/2), 
 		0.f);
 	foot.shape = &foot_shape;

@@ -29,7 +29,6 @@ class MyContactListener : public b2ContactListener
 		Platform* platform = nullptr;
 		if (contact->GetFixtureA()->GetUserData() != NULL)
 		{
-			
 			CheckUserData(contact->GetFixtureA()->GetUserData(), &pChar, &platform);
 		}
 		if (contact->GetFixtureB()->GetUserData() != NULL)
